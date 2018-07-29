@@ -3,7 +3,6 @@
 // p - степень, в которую нужно возвести x
 
 #include <iostream>
-
 using namespace std;
 
 int power(int x, unsigned p) {

@@ -35,11 +35,9 @@ Sample Output:
 */
 
 #include <iostream>
-
 using namespace std;
 
-int main()
-{
+int main() {
     int t, a, b;
 
     std::cin >> t;

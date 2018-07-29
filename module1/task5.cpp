@@ -16,7 +16,6 @@ There are a lot of spaces here
 */
 
 #include <iostream>
-
 using namespace std;
 
 int main() {

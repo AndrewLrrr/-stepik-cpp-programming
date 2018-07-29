@@ -24,11 +24,9 @@ Sample Output:
 */
 
 #include <iostream>
-
 using namespace std;
 
-int log2(int num)
-{
+int log2(int num) {
     int base = 0;
     int total = 2;
     while (total <= num) {

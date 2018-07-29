@@ -1,1 +1,7 @@
 .idea
+*
+!.gitignore
+!*.c
+!*.cpp
+!module1
+!module2
