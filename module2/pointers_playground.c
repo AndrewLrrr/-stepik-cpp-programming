@@ -50,6 +50,36 @@ void play3() {
     printf("a after = %d\n", a);
 }
 
+void play4() {
+    int A[] = {2, 4, 5, 8, 1};
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("Address of &A[i] = %p\n", &A[i]);
+        printf("Address of A + i = %p\n", A + i);
+        printf("Value of A[i] = %d\n", A[i]);
+        printf("Value of *(A + i) = %d\n", *(A + i));
+    }
+}
+
+int sumOfElements(int A[], int size) {
+    // int A[] implicitly converts to int *A
+    int i, sum = 0;
+//    int size = sizeof(A)/ sizeof(A[0]);
+    printf("SOE - Size of A = %lu, size of A[0] = %lu\n", sizeof(A), sizeof(A[0]));
+    for (i = 0; i < size; i++) {
+        sum += A[i]; // A[i] can be used *(A + i)
+    }
+    return sum;
+}
+
+void play5() {
+    int A[] = {1, 2, 3, 4, 5};
+    int size = sizeof(A)/ sizeof(A[0]);
+    int total = sumOfElements(A, size); // A can be used &A[0]
+    printf("Main - Size of A = %lu, size of A[0] = %lu\n", sizeof(A), sizeof(A[0]));
+    printf("Sum of elements = %d\n", total);
+}
+
 int main() {
     printf("Playground 1: \n");
     play1();
@@ -59,6 +89,12 @@ int main() {
 
     printf("\nPlayground 3: \n");
     play3();
+
+    printf("\nPlayground 4: \n");
+    play4();
+
+    printf("\nPlayground 5: \n");
+    play5();
 
     return 0;
 }
