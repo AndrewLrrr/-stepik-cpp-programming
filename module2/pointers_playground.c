@@ -80,6 +80,23 @@ void play5() {
     printf("Sum of elements = %d\n", total);
 }
 
+void print(const char *C) {
+//    C[0] = 'A';  // Error
+    while (*C != '\0') {
+        printf("%c", *C);
+        C++;
+    }
+    printf("\n");
+}
+
+void play6() {
+    char C[20] = "Aello";  // String gets stored in the space for array
+    C[0] = 'H';  // Ok
+//    char *C = "Aello";  // String gets stored as compile time constant
+//    C[0] = 'H';  // Error
+    print(C);
+}
+
 int main() {
     printf("Playground 1: \n");
     play1();
@@ -95,6 +112,9 @@ int main() {
 
     printf("\nPlayground 5: \n");
     play5();
+
+    printf("\nPlayground 6: \n");
+    play6();
 
     return 0;
 }
