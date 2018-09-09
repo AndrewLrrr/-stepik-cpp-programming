@@ -1,5 +1,5 @@
-.idea
 *
+!README.md
 !.gitignore
 !*.h
 !*.hpp
@@ -11,3 +11,4 @@
 !module4
 !module5
 !module6
+!pointers
